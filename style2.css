@@ -57,21 +57,14 @@ body {
     padding: 2px 10px;
     font-size: 25px;
     background-color: #35368f;
-    animation-name: in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    display: none;
     cursor: pointer;
+    top: -60px;
 }
 
 .reset:hover {
     transform: scale(1.2);
 }
 
-.reset-active{
-    display: block;
-}
 
 @keyframes out {
     0%{

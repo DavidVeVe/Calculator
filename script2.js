@@ -71,7 +71,7 @@ var displayResult = function () {
             else {
                 result = 'You have broken the calculator'
                 calculator.classList.add('broken')
-                reset.classList.add('reset-active')
+                reset.style.animation = 'in 1s forwards'
             }
         }
 
