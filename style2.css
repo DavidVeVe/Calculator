@@ -82,22 +82,22 @@ body {
 
 @keyframes in {
     0%{
-        top: -60px;
+        top: -75px;
     }
     25%{
-        top: 80px;
-    }
-    40%{
-        top: 60px;
-    }
-    55%{
-        top: 70px;
-    }
-    70%{
         top: 65px;
     }
+    40%{
+        top: 45px;
+    }
+    55%{
+        top: 55px;
+    }
+    70%{
+        top: 50px;
+    }
     100%{
-        top: 70px;
+        top: 50px;
     }
 }
 
@@ -127,8 +127,20 @@ body {
     background-color: #4c5070;
 }
 
-.paragraph, .toldyou {
+.toldyou {
+    margin-top: 20px;
     margin-bottom: 50px;
+    font-size: 35px;
+    display: none;
+    color: #e4e019;
+}
+
+.active {
+    display: block;
+}
+
+.paragraph {
+    margin-bottom: 0;
     font-size: 25px;
 }
 

@@ -9,6 +9,7 @@ var tagElement = function (element) {
 
 var screen = tagElement('#screen'),
     paragraph = tagElement('#paragraph'),
+    toldyou = tagElement('#toldyou'),
     body = tagElement('#body'),
     calculator = tagElement('#calculator'),
     reset = tagElement('#reset'),
@@ -74,6 +75,8 @@ var displayResult = function () {
                 result = 'You have broken the calculator'
                 calculator.classList.add('broken')
                 reset.style.animation = 'in 1s forwards'
+                toldyou.classList.add('active')
+
             }
         }
 
@@ -92,6 +95,7 @@ var displayResult = function () {
 function resetCalculator () {
         calculator.classList.remove('broken')
         reset.style.animation = 'out 1s forwards'
+        toldyou.classList.remove('active')
         clearAll()
 }
 
