@@ -49,6 +49,60 @@ body {
     }
 }
 
+.reset {
+    background-color: rgb(130, 138, 138);
+    position: absolute;
+    border-radius: 10px;
+    width: auto;
+    padding: 2px 10px;
+    font-size: 25px;
+    background-color: #35368f;
+    animation-name: in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    display: none;
+    cursor: pointer;
+}
+
+.reset:hover {
+    transform: scale(1.2);
+}
+
+.reset-active{
+    display: block;
+}
+
+@keyframes out {
+    0%{
+        top: 70px;
+    }
+    100%{
+        top: -60px;
+    }
+}
+
+@keyframes in {
+    0%{
+        top: -60px;
+    }
+    25%{
+        top: 80px;
+    }
+    40%{
+        top: 60px;
+    }
+    55%{
+        top: 70px;
+    }
+    70%{
+        top: 65px;
+    }
+    100%{
+        top: 70px;
+    }
+}
+
 .num,
 .ops,
 .clear,

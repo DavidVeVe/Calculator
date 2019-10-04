@@ -9,6 +9,7 @@ var tagElement = function (element) {
 
 var screen = tagElement('#screen'),
     calculator = tagElement('#calculator'),
+    reset = tagElement('#reset'),
     equals = tagElement('#equals'),
     clear = tagElement('#clear'),
     numbers = tagElement('.num'),
@@ -34,6 +35,7 @@ var moveNumber = function () {
     num = ''
     operator = this.getAttribute('data-op')
     equals.setAttribute('data-result', '')
+
 }
 
 var displayResult = function () {
@@ -63,8 +65,14 @@ var displayResult = function () {
         }
 
         if(!isFinite(result)) {
-            result = 'You have broken the calculator'
-            calculator.classList.add('broken')
+            if(isNaN(result)) {
+                result = 'You broke it'
+            }
+            else {
+                result = 'You have broken the calculator'
+                calculator.classList.add('broken')
+                reset.classList.add('reset-active')
+            }
         }
 
     screen.innerHTML = result
@@ -73,6 +81,12 @@ var displayResult = function () {
     backNum = 0
     num = result
 
+}
+
+function resetCalculator () {
+        calculator.classList.remove('broken')
+        reset.style.animation = 'out 1s forwards'
+        clearAll()
 }
 
 function clearAll () {
@@ -93,3 +107,5 @@ for (var i = 0; i < ops.length; i++) {
 equals.onclick = displayResult
 
 clear.onclick = clearAll
+
+reset.onclick = resetCalculator
