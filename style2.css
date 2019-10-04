@@ -3,14 +3,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: linear-gradient(#111111, #9198e5);
     color: white;
-    font-size: 35px;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .calculator {
+    font-size: 35px;
     height: auto;
     display: grid;
     grid-template: repeat(5, 80px) / repeat(4, 80px);
@@ -21,6 +22,10 @@ body {
                          "zero period equals plus";
                          align-content: center;
     grid-gap: 5px;
+}
+
+.body2 {
+    background: linear-gradient(#0a5815, #1b2594);
 }
 
 .broken {
@@ -120,6 +125,11 @@ body {
 .clear:hover,
 .equals:hover {
     background-color: #4c5070;
+}
+
+.paragraph, .toldyou {
+    margin-bottom: 50px;
+    font-size: 25px;
 }
 
 .clear {

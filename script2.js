@@ -8,6 +8,8 @@ var tagElement = function (element) {
 }
 
 var screen = tagElement('#screen'),
+    paragraph = tagElement('#paragraph'),
+    body = tagElement('#body'),
     calculator = tagElement('#calculator'),
     reset = tagElement('#reset'),
     equals = tagElement('#equals'),
@@ -73,6 +75,10 @@ var displayResult = function () {
                 calculator.classList.add('broken')
                 reset.style.animation = 'in 1s forwards'
             }
+        }
+
+        if(result == '100'  ) {
+            body.classList.add('body2')
         }
 
     screen.innerHTML = result
