@@ -23,6 +23,32 @@ body {
     grid-gap: 5px;
 }
 
+.broken {
+    animation-name: broken;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    transform-origin: right top;
+    animation-timing-function: linear;
+}
+
+@keyframes broken {
+    0% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(-38deg);
+    }
+    65% {
+        transform: rotate(-25deg);
+    }
+    90%{
+        transform: rotate(-37deg);
+    }
+    100% {
+        transform: rotate(-35deg);
+    }
+}
+
 .num,
 .ops,
 .clear,
@@ -42,12 +68,12 @@ body {
     transform: scale(.7);
 }
 
-/* .num:hover,
+.num:hover,
 .ops:hover,
 .clear:hover,
 .equals:hover {
     background-color: #4c5070;
-} */
+}
 
 .clear {
     grid-area: clear;

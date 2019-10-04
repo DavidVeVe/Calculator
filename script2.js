@@ -8,6 +8,7 @@ var tagElement = function (element) {
 }
 
 var screen = tagElement('#screen'),
+    calculator = tagElement('#calculator'),
     equals = tagElement('#equals'),
     clear = tagElement('#clear'),
     numbers = tagElement('.num'),
@@ -59,6 +60,11 @@ var displayResult = function () {
 
         default:
             result = num
+        }
+
+        if(!isFinite(result)) {
+            result = 'You have broken the calculator'
+            calculator.classList.add('broken')
         }
 
     screen.innerHTML = result
